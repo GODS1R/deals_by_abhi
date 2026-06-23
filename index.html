@@ -62,32 +62,6 @@
     text-align: center;
   }
 
-  /* How it works */
-  .steps {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .step {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 18px;
-    text-align: center;
-  }
-  .step .step-num {
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    border-radius: 50%;
-    background: var(--accent);
-    color: #fff;
-    font-weight: 700;
-    margin: 0 auto 10px;
-  }
-  .step h3 { font-size: 1.05rem; margin-bottom: 4px; }
-  .step p { color: var(--muted); font-size: 0.9rem; }
-
   /* Product cards */
   .products {
     display: grid;
@@ -106,7 +80,7 @@
     align-items: flex-start;
     gap: 10px;
   }
-  .product-card h3 { font-size: 1.1rem; }
+  .product-card h3 { font-size: 1.05rem; }
   .badge {
     display: inline-block;
     font-size: 0.75rem;
@@ -119,52 +93,11 @@
   .badge.openbox { background: #fff3e0; color: #b5650b; }
   .badge.used { background: #eef0ff; color: #3949ab; }
 
-  .price {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--accent);
-    margin-top: 8px;
-  }
-  .availability {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin-top: 2px;
-  }
-  .interest-count {
-    font-size: 0.85rem;
-    color: var(--muted);
+  .contact-line {
     margin-top: 10px;
-  }
-  .btn {
-    display: inline-block;
-    margin-top: 14px;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
+    font-size: 0.9rem;
     font-weight: 700;
-    padding: 12px 18px;
-    border-radius: 10px;
-    text-align: center;
-    width: 100%;
-  }
-  .btn:active { opacity: 0.85; }
-
-  /* Interest form section */
-  .form-section {
-    background: var(--card-bg);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    text-align: center;
-  }
-  .form-section p { color: var(--muted); margin-bottom: 16px; }
-  .btn-secondary {
-    display: inline-block;
-    background: var(--text);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    padding: 14px 24px;
-    border-radius: 10px;
+    color: var(--accent);
   }
 
   /* Footer */
@@ -184,7 +117,6 @@
   }
 
   @media (min-width: 640px) {
-    .steps { grid-template-columns: repeat(3, 1fr); }
     .products { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
@@ -201,81 +133,169 @@
   </div>
 </header>
 
-<section id="how-it-works">
-  <div class="container">
-    <h2>How It Works</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Browse items</h3>
-        <p>Check current and upcoming stock below.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Register interest</h3>
-        <p>Tap "I'm Interested" to claim your spot.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Get notified</h3>
-        <p>We message you the moment it's available.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="listings">
   <div class="container">
-    <h2>Current Listings / Upcoming Stock</h2>
+    <h2>Current Listings</h2>
 
     <!--
       PRODUCT CARDS — copy a .product-card block below to add a new item.
-      Update: name, condition badge class (sealed / openbox / used), price,
-      availability date, interest count text, and the "I'm Interested" link
-      (Google Form or wa.me WhatsApp link).
+      Update: name (<h3>) and condition badge class (sealed / openbox / used + label text).
+      Pricing is intentionally not shown — buyers contact via Facebook Marketplace.
     -->
     <div class="products">
 
-      <!-- Product 1 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>65" Samsung TV</h3>
+          <h3>DREAME D20 PLUS ROBOT VACUUM &amp; MOP WITH 13KPA</h3>
           <span class="badge openbox">Open Box</span>
         </div>
-        <div class="price">$499</div>
-        <div class="availability">Available from 28 June</div>
-        <div class="interest-count">3 people interested</div>
-        <a class="btn" href="#" target="_blank" rel="noopener">I'm Interested</a>
+        <div class="contact-line">Contact for pricing</div>
       </div>
 
-      <!-- Product 2 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>Apple iPad 10th Gen</h3>
+          <h3>NINJA BLENDER &amp; FOOD PROCESSOR BL780C CANADA</h3>
+          <span class="badge openbox">Open Box</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>DREAME D20 AIR PLUS ROBOT VACUUM &amp; MOP WHITE</h3>
+          <span class="badge openbox">Open Box</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>NINJA PRO PLUS 850W FOOD PROCESSOR 9-CUP</h3>
+          <span class="badge openbox">Open Box</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>NINJA CRISPI PORTABLE GLASS AIR FRYER SYSTEM</h3>
+          <span class="badge openbox">Open Box</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>SHARK VERTEX PRO CORDLESS VACUUM - DUOCLEAN</h3>
           <span class="badge sealed">Sealed</span>
         </div>
-        <div class="price">$379</div>
-        <div class="availability">Available from 28 June</div>
-        <div class="interest-count">5 people interested</div>
-        <a class="btn" href="#" target="_blank" rel="noopener">I'm Interested</a>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>SHARK VERTEX PRO CORDLESS VACUUM - DUOCLEAN</h3>
+          <span class="badge sealed">Sealed</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>SHARK POWERDETECT CORDLESS VACUUM 45T5</h3>
+          <span class="badge sealed">Sealed</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>DREAME L40 ULTRA GEN 2 VACUUM &amp; MOP BLACK</h3>
+          <span class="badge sealed">Sealed</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>NINJA BL660C COUNTERTOP BLENDER 1100W</h3>
+          <span class="badge openbox">Open Box</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>LOGITECH MX KEYS S WIRELESS KEYBOARD, GRAY</h3>
+          <span class="badge openbox">Open Box</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>DREAME L40S ULTRA AE ROBOT VACUUM &amp; MOP</h3>
+          <span class="badge sealed">Sealed</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>MOVA E40 ULTRA ROBOT VACUUM &amp; MOP, 19000PA</h3>
+          <span class="badge sealed">Sealed</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>ALIENWARE AW2725DF OLED GAMING MONITOR 45HZ?</h3>
+          <span class="badge used">Excellent</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>MOVA P10 PRO ULTRA ROBOT VACUUM &amp; MOP</h3>
+          <span class="badge sealed">Sealed</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>DREAME X60 ULTRA ROBOT VACUUM &amp; MOP, BLACK</h3>
+          <span class="badge sealed">Sealed</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>SAMSUNG 27&quot; FHD IPS MONITOR LS27D300GANXZA</h3>
+          <span class="badge used">Excellent</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
+      </div>
+
+      <div class="product-card">
+        <div class="row-top">
+          <h3>DREAME D20 AIR PLUS ROBOT VACUUM &amp; MOP, BLACK</h3>
+          <span class="badge sealed">Sealed</span>
+        </div>
+        <div class="contact-line">Contact for pricing</div>
       </div>
 
     </div>
-  </div>
-</section>
-
-<section class="form-section">
-  <div class="container">
-    <h2>Register Your Interest</h2>
-    <p>Tell us your name, WhatsApp number, which item you want, and whether you'd put down a deposit to secure it.</p>
-    <a class="btn-secondary" href="#" target="_blank" rel="noopener">Fill Out Interest Form</a>
   </div>
 </section>
 
 <footer>
   <div class="container">
     <a href="#" target="_blank" rel="noopener">View us on Facebook Marketplace</a>
-    <p class="note">Stock changes weekly — check back or register interest to get notified.</p>
+    <p class="note">Stock changes weekly — message us on Facebook Marketplace for pricing and availability.</p>
   </div>
 </footer>
 

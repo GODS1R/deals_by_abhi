@@ -1,6 +1,6 @@
 # Deals by Abhi
 
-A single-page site for sourcing buyer interest before stock is purchased. Drives traffic from Facebook Marketplace listings.
+A single-page catalog site listing current stock. Buyers contact via Facebook Marketplace for pricing — the site itself doesn't capture leads or show prices.
 
 ## Enable GitHub Pages
 
@@ -16,16 +16,8 @@ All content lives in `index.html`. Each product is a `.product-card` block insid
 To add/edit a product, copy a `.product-card` block and update:
 
 - `<h3>` — product name
-- badge class: `sealed`, `openbox`, or `used` (controls color), and its text
-- `.price` — price
-- `.availability` — availability date text
-- `.interest-count` — interested count text (update manually as people register)
-- `.btn href` — link to your Google Form or WhatsApp (`https://wa.me/<number>`)
+- badge class: `sealed`, `openbox`, or `used` (controls color), and its label text
 
-## Updating placeholder links
+## Updating the footer link
 
-Search `index.html` for `href="#"` and replace with:
-
-- The **"I'm Interested"** buttons → your Google Form link or `wa.me` WhatsApp link
-- The **"Fill Out Interest Form"** button → your Google Form link
-- The **footer Facebook link** → your Facebook Marketplace profile URL
+Replace `href="#"` on the footer's Facebook link with your Facebook Marketplace profile URL.
