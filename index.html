@@ -22,24 +22,15 @@
   }
   .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
 
-  /* Header */
   header.hero {
     background: linear-gradient(135deg, #fff7f0, #ffffff);
     padding: 40px 0 30px;
     text-align: center;
     border-bottom: 1px solid var(--border);
   }
-  header.hero h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--text);
-  }
+  header.hero h1 { font-size: 2rem; font-weight: 800; }
   header.hero h1 span { color: var(--accent); }
-  header.hero p.tagline {
-    margin-top: 8px;
-    font-size: 1.05rem;
-    color: var(--muted);
-  }
+  header.hero p.tagline { margin-top: 8px; font-size: 1.05rem; color: var(--muted); }
   .trust-badge {
     display: inline-flex;
     align-items: center;
@@ -54,15 +45,9 @@
   }
   .trust-badge .stars { color: #f5a623; letter-spacing: 1px; }
 
-  /* Generic section spacing */
   section { padding: 36px 0; }
-  section h2 {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+  section h2 { font-size: 1.4rem; margin-bottom: 20px; text-align: center; }
 
-  /* Product cards */
   .products {
     display: grid;
     grid-template-columns: 1fr;
@@ -80,19 +65,26 @@
     align-items: flex-start;
     gap: 10px;
   }
-  .product-card h3 { font-size: 1.05rem; }
+  .product-card h3 { font-size: 1rem; font-weight: 700; }
   .badge {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     padding: 4px 10px;
     border-radius: 999px;
     white-space: nowrap;
+    flex-shrink: 0;
   }
-  .badge.sealed { background: #e6f6ec; color: #1a7f3c; }
+  .badge.sealed  { background: #e6f6ec; color: #1a7f3c; }
   .badge.openbox { background: #fff3e0; color: #b5650b; }
-  .badge.used { background: #eef0ff; color: #3949ab; }
+  .badge.used    { background: #eef0ff; color: #3949ab; }
 
+  .product-card .desc {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.45;
+  }
   .contact-line {
     margin-top: 10px;
     font-size: 0.9rem;
@@ -100,21 +92,13 @@
     color: var(--accent);
   }
 
-  /* Footer */
   footer {
     padding: 30px 0 50px;
     text-align: center;
+    border-top: 1px solid var(--border);
   }
-  footer a {
-    color: var(--accent);
-    font-weight: 700;
-    text-decoration: none;
-  }
-  footer p.note {
-    margin-top: 10px;
-    color: var(--muted);
-    font-size: 0.85rem;
-  }
+  footer a { color: var(--accent); font-weight: 700; text-decoration: none; }
+  footer p.note { margin-top: 10px; color: var(--muted); font-size: 0.85rem; }
 
   @media (min-width: 640px) {
     .products { grid-template-columns: repeat(2, 1fr); }
@@ -138,153 +122,189 @@
     <h2>Current Listings</h2>
 
     <!--
-      PRODUCT CARDS — copy a .product-card block below to add a new item.
-      Update: name (<h3>) and condition badge class (sealed / openbox / used + label text).
-      Pricing is intentionally not shown — buyers contact via Facebook Marketplace.
+      PRODUCT CARDS
+      To add/edit: copy a .product-card block, update h3 (name),
+      badge class (sealed / openbox / used), desc text.
     -->
     <div class="products">
 
+      <!-- Lot 15 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>DREAME D20 PLUS ROBOT VACUUM &amp; MOP WITH 13KPA</h3>
+          <h3>Dreame D20 Plus Robot Vacuum &amp; Mop</h3>
           <span class="badge openbox">Open Box</span>
         </div>
+        <p class="desc">13,000Pa suction, 150-day hands-free with 5L dust bag, DuoBrush for pet hair, LDS mapping, app &amp; voice control.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 21 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>NINJA BLENDER &amp; FOOD PROCESSOR BL780C CANADA</h3>
+          <h3>Ninja BL780C All-in-One Kitchen System</h3>
           <span class="badge openbox">Open Box</span>
         </div>
+        <p class="desc">1200W blender &amp; food processor, 72oz pitcher, 8-cup bowl, Nutri cups for smoothies, ice crushing &amp; dough. BPA-free, dishwasher safe.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 218 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>DREAME D20 AIR PLUS ROBOT VACUUM &amp; MOP WHITE</h3>
+          <h3>Dreame D20 Air Plus Robot Vacuum &amp; Mop — White</h3>
           <span class="badge openbox">Open Box</span>
         </div>
+        <p class="desc">20,000Pa Vormax suction, 120-day hands-free dust collection, anti-tangling tech, auto-emptying dock, deep carpet cleaning, smart navigation.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 574 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>NINJA PRO PLUS 850W FOOD PROCESSOR 9-CUP</h3>
+          <h3>Ninja Pro Plus 850W Food Processor 9-Cup</h3>
           <span class="badge openbox">Open Box</span>
         </div>
+        <p class="desc">850W with Auto-iQ presets, 9-cup capacity, chop / slice / puree / dough in one appliance. Stainless finish, dishwasher safe.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 666 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>NINJA CRISPI PORTABLE GLASS AIR FRYER SYSTEM</h3>
+          <h3>Ninja Crispi Portable Glass Air Fryer System</h3>
           <span class="badge openbox">Open Box</span>
         </div>
+        <p class="desc">4-qt &amp; 6-cup thermal-shock-resistant glass containers, air fry / bake / max crisp / re-crisp, leak-proof, dishwasher safe, programmable.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 1876 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>SHARK VERTEX PRO CORDLESS VACUUM - DUOCLEAN</h3>
+          <h3>Shark Vertex Pro Cordless Vacuum IZ662H</h3>
           <span class="badge sealed">Sealed</span>
         </div>
+        <p class="desc">DuoClean PowerFins, HyperVelocity suction, self-cleaning brushroll, 60-min runtime, MultiFLEX wand, HEPA filter, LED headlights, IQ display.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 2163 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>SHARK VERTEX PRO CORDLESS VACUUM - DUOCLEAN</h3>
+          <h3>Shark Vertex Pro Cordless Vacuum IZ662H</h3>
           <span class="badge sealed">Sealed</span>
         </div>
+        <p class="desc">DuoClean PowerFins, HyperVelocity suction, self-cleaning brushroll, 60-min runtime, MultiFLEX wand, HEPA filter, LED headlights, IQ display.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 2645 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>SHARK POWERDETECT CORDLESS VACUUM 45T5</h3>
+          <h3>Shark PowerDetect Cordless Stick Vacuum IP1251C</h3>
           <span class="badge sealed">Sealed</span>
         </div>
+        <p class="desc">Shark’s most powerful cordless vacuum. DuoClean Detect nozzle, 4 intelligent technologies (auto power boost, edge &amp; corner detect), HEPA filtration, pet hair pickup.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 4505 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>DREAME L40 ULTRA GEN 2 VACUUM &amp; MOP BLACK</h3>
+          <h3>Dreame L40 Ultra Gen 2 Robot Vacuum &amp; Mop</h3>
           <span class="badge sealed">Sealed</span>
         </div>
+        <p class="desc">25,000Pa suction, DuoScrub mopping system, extendable side brush &amp; mop, all-in-one self-emptying &amp; hot air drying dock, voice &amp; app control.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 5428 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>NINJA BL660C COUNTERTOP BLENDER 1100W</h3>
+          <h3>Ninja BL660C Professional Countertop Blender</h3>
           <span class="badge openbox">Open Box</span>
         </div>
+        <p class="desc">1100W, 72oz total crushing pitcher, 2× 16oz Nutri cups with to-go lids, 6-blade assembly, 3 speeds + pulse. Perfect for smoothies &amp; frozen drinks.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 6948 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>LOGITECH MX KEYS S WIRELESS KEYBOARD, GRAY</h3>
+          <h3>Logitech MX Keys S Wireless Keyboard — Gray</h3>
           <span class="badge openbox">Open Box</span>
         </div>
+        <p class="desc">Low-profile, quiet backlit keys, programmable Smart Actions, Bluetooth + USB-C, connect up to 3 devices, Windows / Mac / Linux / Chrome.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 13013 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>DREAME L40S ULTRA AE ROBOT VACUUM &amp; MOP</h3>
+          <h3>Dreame L40s Ultra AE Robot Vacuum &amp; Mop</h3>
           <span class="badge sealed">Sealed</span>
         </div>
+        <p class="desc">19,000Pa Vormax suction, 167°F self-cleaning washboard, TriCut brush selection, flexible MopExtend tech, all-in-one auto station, tangle-free, voice control.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 13054 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>MOVA E40 ULTRA ROBOT VACUUM &amp; MOP, 19000PA</h3>
+          <h3>MOVA E40 Ultra Robot Vacuum &amp; Mop</h3>
           <span class="badge sealed">Sealed</span>
         </div>
+        <p class="desc">19,000Pa TurboForce suction, MaxiReach extendable mop, hot air drying, 75-day hands-free with 3.2L dust bag, 360° obstacle avoidance, app &amp; voice control.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 13027 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>ALIENWARE AW2725DF OLED GAMING MONITOR 45HZ?</h3>
+          <h3>Alienware AW2725DF OLED Gaming Monitor 27"</h3>
           <span class="badge used">Excellent</span>
         </div>
+        <p class="desc">QD-OLED 2560×1440 360Hz 0.03ms, AMD FreeSync Premium Pro, HDMI / DP / USB 3.2, height / tilt / swivel / pivot adjustable stand.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 13146 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>MOVA P10 PRO ULTRA ROBOT VACUUM &amp; MOP</h3>
+          <h3>MOVA P10 Pro Ultra Robot Vacuum &amp; Mop</h3>
           <span class="badge sealed">Sealed</span>
         </div>
+        <p class="desc">13,000Pa suction, 140°F hot water mop washing &amp; drying, dual spinning extendable mops, 10.5mm carpet lifting, covers up to 4500 sqft, 360° obstacle avoidance.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 13343 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>DREAME X60 ULTRA ROBOT VACUUM &amp; MOP, BLACK</h3>
+          <h3>Dreame X60 Ultra Robot Vacuum &amp; Mop</h3>
           <span class="badge sealed">Sealed</span>
         </div>
+        <p class="desc">35,000Pa suction, ultra-thin 3.13in design, self-emptying &amp; auto-refilling, mop self-cleaning, 100% detangling, 280+ obstacle avoidance.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 13403 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>SAMSUNG 27&quot; FHD IPS MONITOR LS27D300GANXZA</h3>
+          <h3>Samsung 27" FHD IPS Monitor LS27D300GANXZA</h3>
           <span class="badge used">Excellent</span>
         </div>
+        <p class="desc">27" IPS panel, FHD 1080p, 100Hz, Eye-Saver mode reduces blue light, 5ms response, super slim design. Canada version.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
+      <!-- Lot 13734 -->
       <div class="product-card">
         <div class="row-top">
-          <h3>DREAME D20 AIR PLUS ROBOT VACUUM &amp; MOP, BLACK</h3>
+          <h3>Dreame D20 Air Plus Robot Vacuum &amp; Mop — Black</h3>
           <span class="badge sealed">Sealed</span>
         </div>
+        <p class="desc">20,000Pa Vormax suction, 120-day hands-free dust collection, anti-tangling tech, auto-emptying dock, deep carpet cleaning, smart navigation.</p>
         <div class="contact-line">Contact for pricing</div>
       </div>
 
