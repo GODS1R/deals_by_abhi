@@ -181,7 +181,37 @@
   #lb.open { display: flex; }
   #lb img { max-width: 95vw; max-height: 92vh; border-radius: 8px; object-fit: contain; }
 
-  /* Footer */
+  .stock-banner {
+    background: #fff8f0;
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .stock-banner strong { display: block; margin-bottom: 4px; font-size: 0.95rem; }
+
+  .faq { padding: 0 0 48px; }
+  .faq h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+    padding: 0 2px;
+  }
+  .faq-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .faq-item dt { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+  .faq-item dd { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
   footer {
     padding: 28px 0 48px;
     text-align: center;
@@ -219,6 +249,10 @@
 
 <section id="listings">
   <div class="container">
+    <div class="stock-banner">
+      <strong>Current stock is out — new batch arriving next week</strong>
+      I source in bulk, so the more interest I get, the better price I can offer. If interest is low I may not be able to arrange all products, but everyone who messages me will get a full update by Monday with confirmed pricing and availability.
+    </div>
     <h2>Current Listings</h2>
 
     <div class="products">
@@ -618,10 +652,38 @@
   </div>
 </section>
 
+<section class="faq">
+  <div class="container">
+    <h2>FAQ</h2>
+    <dl>
+      <div class="faq-item">
+        <dt>What condition are the products in?</dt>
+        <dd>All products are either factory sealed or open box. Sealed means untouched in original packaging. Open box means the box was opened but the product is unused or lightly used and fully intact.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Is there a warranty?</dt>
+        <dd>Since most products are new or near-new, manufacturer warranty should apply. I don't provide a personal warranty, but if there's any issue at the time of purchase I'll do my best to help sort it out.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Where are you located?</dt>
+        <dd>Based in Kitchener, ON. Meetup at a convenient public location.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>How does pickup/delivery work?</dt>
+        <dd>Pickup is preferred. I can try to arrange drop-off with a delivery charge depending on location.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Are prices negotiable?</dt>
+        <dd>Prices shown are ranges — the final price depends on how much stock I get. Message me and I'll give you the best price I can.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <a href="#" target="_blank" rel="noopener">View us on Facebook Marketplace</a>
-    <p class="note">Stock changes weekly — message us on Facebook Marketplace for pricing and availability.</p>
+    <p class="note">Message on Facebook Marketplace for pricing and availability.</p>
   </div>
 </footer>
 
